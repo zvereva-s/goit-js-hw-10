@@ -40,7 +40,7 @@ function checkResult(result) {
         return;
     } else if (result.length === 1) {
         result[0].languages = [...Object.values(result[0].languages)];
-        result[0].capital = result[0].capital.join('');
+        // result[0].capital = result[0].capital.join('');
 
         console.log(result[0]);
 
