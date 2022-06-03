@@ -40,6 +40,8 @@ function checkResult(result) {
         return;
     } else if (result.length === 1) {
         result[0].languages = [...Object.values(result[0].languages)];
+        result[0].capital = [...Object.values(result[0].capital)];
+
 
         console.log(result[0]);
 
