@@ -29,6 +29,8 @@ function onInputChange(e) {
         checkResult(result)}).catch((err) => {
         console.log(err);
             Notify.failure('Oops, there is no country with that name');
+            listOfCountries.innerHTML = '';
+            countryInfo.innerHTML = '';
     })
 
  };
@@ -40,7 +42,7 @@ function checkResult(result) {
         return;
     } else if (result.length === 1) {
         result[0].languages = [...Object.values(result[0].languages)];
-        result[0].capital = result[0].capital[0].join('');
+        // result[0].capital = result[0].capital[0].join('');
 
 
         console.log(result[0]);
