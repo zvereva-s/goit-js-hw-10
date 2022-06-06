@@ -42,10 +42,11 @@ function checkResult(result) {
         return;
     } else if (result.length === 1) {
         result[0].languages = [...Object.values(result[0].languages)];
-        result[0].capital = result[0].capital[0]
+        // result[0].capital = result[0].capital[0];
         
 
-        countryInfo.innerHTML = countryDesc({name, capital, population, languages}=result[0]);
+        // countryInfo.innerHTML = countryDesc({name, capital, population, languages}=result[0]);
+        countryInfo.innerHTML = countryDesc(result[0]);
         listOfCountries.innerHTML = '';
     } else {
         listOfCountries.innerHTML = countriesList(result);
